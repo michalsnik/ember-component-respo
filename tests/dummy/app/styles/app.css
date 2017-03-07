@@ -1,0 +1,46 @@
+body {
+  background: #fcfcfc;
+  padding: 50px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto 50px;
+  max-width: 80%;
+  border-radius: 4px;
+  background: #FFF;
+  border: 1px solid #ccc;
+  padding: 20px 30px 30px;
+}
+
+.container--small {
+  width: 300px;
+}
+
+.container--medium {
+  width: 600px;
+}
+
+.container--big {
+  width: 900px;
+}
+
+.example-box {
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 4px;
+  padding: 30px;
+  background: blue;
+  color: #FFF;
+}
+
+.example-box.lt-200 {
+  background: red;
+}
+
+.example-box.gt-500 {
+  background: green;
+}
