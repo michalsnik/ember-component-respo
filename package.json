@@ -1,17 +1,22 @@
 {
   "name": "ember-component-respo",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Ember addon for enhancing components with dynamic classes based on their actual size",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "responsive",
+    "respo",
+    "ember-responsive",
+    "components-respo",
+    "components"
   ],
   "license": "MIT",
-  "author": "",
+  "author": "Michał Sajnóg <michal.sajnog@hotmail.com> (http://github.com/michalsnik)",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "git@github.com:michalsnik/ember-component-respo.git",
   "scripts": {
     "build": "ember build",
     "start": "ember server",

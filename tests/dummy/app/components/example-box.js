@@ -6,5 +6,5 @@ const { Component } = Ember;
 export default Component.extend({
   layout,
   classNames: ['example-box'],
-  respo: ['200', '400', '500'],
+  respo: [300, 480, 640],
 });

@@ -37,10 +37,10 @@ body {
   color: #FFF;
 }
 
-.example-box.lt-200 {
+.example-box.lt-300 {
   background: red;
 }
 
-.example-box.gt-500 {
+.example-box.gt-480 {
   background: green;
 }

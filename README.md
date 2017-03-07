@@ -1,27 +1,44 @@
 # ember-component-respo
 
-This README outlines the details of collaborating on this Ember addon.
+This is an addon that enhances components with dynamic classes based on their actual sizes, regardless of window width.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd ember-component-respo`
-* `npm install`
-* `bower install`
+```
+ember install ember-component-respo
+```
 
-## Running
+## Usage
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+Set respo breakpoints in your component:
 
-## Running Tests
+```
+export default Ember.Component.extend({
+  classNames: ['example-box'],
+  respo: [300, 480, 640],
+});
+```
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+Depending on the actual component's size it will add proper class names on top of it, like so:
 
-## Building
+```
+<div id="ember332" class="example-box gt-300 gte-300 lt-480 lte-480 lt-640 lte-640 ember-view">
+  example box
+</div>
+```
 
-* `ember build`
+Default prefixes are: `gt, gte, eq, lt, lte`. If you want to disable some, use object as respo configuration:
 
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+```
+export default Ember.Component.extend({
+  classNames: ['example-box'],
+  respo: {
+    breakpoints: [300, 480, 640],
+    prefixes: ['gt', 'lt'],
+  },
+});
+```
+
+## License
+
+This library is released it under the MIT license.
