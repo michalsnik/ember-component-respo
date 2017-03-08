@@ -63,8 +63,14 @@ export default Mixin.create({
   _setRespoClasses() {
     if (!get(this, 'respo')) { return; }
 
-    const { breakpoints, prefixes } = get(this, 'respo');
     const width = this.$().width();
+    const classes = this._getRespoClasses(get(this, 'respo'), width);
+
+    set(this, 'respoClassNames', classes.join(' '));
+  },
+
+  _getRespoClasses(respo, width) {
+    const { breakpoints, prefixes } = respo;
 
     const classes = [];
 
@@ -90,6 +96,6 @@ export default Mixin.create({
       }
     });
 
-    set(this, 'respoClassNames', classes.join(' '));
+    return classes;
   },
 });
