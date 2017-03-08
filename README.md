@@ -1,7 +1,7 @@
 # ember-component-respo
 
 [![NPM version](https://img.shields.io/npm/v/ember-component-respo.svg?style=flat)](https://npmjs.org/package/ember-component-respo)
-[![Build Status](https://travis-ci.org/netguru/ember-component-respo.svg?branch=master)](https://travis-ci.org/netguru/ember-component-respo)
+[![Build Status](https://travis-ci.org/michalsnik/ember-component-respo.svg?branch=master)](https://travis-ci.org/michalsnik/ember-component-respo)
 
 > This is an addon that enhances components with dynamic classes based on their actual sizes, regardless of window width.
 
