@@ -1,16 +1,20 @@
 # ember-component-respo
 
+[![NPM version](https://img.shields.io/npm/v/ember-component-respo.svg?style=flat)](https://npmjs.org/package/ember-component-respo)
+[![Build Status](https://travis-ci.org/netguru/ember-component-respo.svg?branch=master)](https://travis-ci.org/netguru/ember-component-respo)
+
 > This is an addon that enhances components with dynamic classes based on their actual sizes, regardless of window width.
 
-## Installation
+
+## 🚀 Usage
+
+### 1. Install addon
 
 ```
 ember install ember-component-respo
 ```
 
-## Usage
-
-Set respo breakpoints in your component:
+### 2. Setup breakpoints
 
 ```javascript
 export default Ember.Component.extend({
@@ -39,6 +43,6 @@ export default Ember.Component.extend({
 });
 ```
 
-## License
+## 🔓 License
 
 This library is released it under the MIT license.
