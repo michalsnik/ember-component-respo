@@ -19,9 +19,6 @@ export default Mixin.create({
    * 
    */
   respo: null, // to be set in component
-
-  classNameBindings: ['respoClassNames'],
-
   respoClassNames: null, // generated class names
 
   didRender() {

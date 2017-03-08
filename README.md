@@ -8,17 +8,18 @@
 
 ## 🚀 Usage
 
-### 1. Install addon
+### 1. Install addon:
 
 ```
 ember install ember-component-respo
 ```
 
-### 2. Setup breakpoints
+### 2. Setup `respo` breakpoints and `classNameBindings`:
 
 ```javascript
 export default Ember.Component.extend({
   classNames: ['example-box'],
+  classNameBindings: ['respoClassNames'],
   respo: [300, 480, 640],
 });
 ```
@@ -36,6 +37,7 @@ Default prefixes are: `gt, gte, eq, lt, lte`. If you want to disable some, use o
 ```javascript
 export default Ember.Component.extend({
   classNames: ['example-box'],
+  classNameBindings: ['respoClassNames'],
   respo: {
     breakpoints: [300, 480, 640],
     prefixes: ['gt', 'lt'],
