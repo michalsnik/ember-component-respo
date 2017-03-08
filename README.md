@@ -32,7 +32,7 @@ Depending on the actual component's size it will add proper class names on top o
 </div>
 ```
 
-Default prefixes are: `gt, gte, eq, lt, lte`. If you want to disable some, use object as respo configuration:
+Default prefixes are: `gt, gte, eq, lt, lte`. If you want to disable some, use the object form of `respo` for configuration:
 
 ```javascript
 export default Ember.Component.extend({
@@ -47,4 +47,4 @@ export default Ember.Component.extend({
 
 ## 🔓 License
 
-This library is released it under the MIT license.
+This library is released under the MIT license.
