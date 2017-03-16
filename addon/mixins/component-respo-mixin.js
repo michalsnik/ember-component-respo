@@ -1,22 +1,22 @@
 import Ember from 'ember';
 
-const { Mixin, get, getWithDefault, set } = Ember;
+const { Mixin, get, getWithDefault, set, run: { throttle } } = Ember;
 
 const defaultPrefixes = ['lt', 'lte', 'gt', 'gte', 'eq'];
 
 export default Mixin.create({
   /**
    * Example respo settings:
-   * 
+   *
    * respo = {
    *   breakpoints: [200, 500, 800],
    *   prefixes: ['lt', 'lte', 'gt', 'gte', 'eq'],
    * }
-   * 
+   *
    * or just:
-   * 
+   *
    * respo = [200, 500, 800]
-   * 
+   *
    */
   respo: null, // to be set in component
   respoClassNames: null, // generated class names
@@ -37,7 +37,7 @@ export default Mixin.create({
   },
 
   _respoListener() {
-    this._setRespoClasses();
+    throttle(this, this._setRespoClasses, 400);
   },
 
   _setupRespo() {
@@ -75,7 +75,7 @@ export default Mixin.create({
       if (prefixes.indexOf('gt') > -1 && width > breakpoint) {
         classes.push(`gt-${breakpoint}`);
       }
-      
+
       if (prefixes.indexOf('gte') > -1 && width >= breakpoint) {
         classes.push(`gte-${breakpoint}`);
       }
